@@ -11,6 +11,13 @@ public class GameMaster : MonoBehaviour
     void Start()
     {
         UpdateText();
+        MouseCursor();
+    }
+
+    void MouseCursor()
+    {
+        Cursor.visible = false;
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void UpdateScore()
