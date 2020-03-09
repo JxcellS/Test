@@ -6,10 +6,13 @@ using TMPro;
 public class GameMaster : MonoBehaviour
 {
     [SerializeField] GameObject textObject = null;
+    [SerializeField] GameObject textObjectWinner = null;
+    [SerializeField] string winMessage = "You are a Winner!";
     int score = 0;
 
     void Start()
     {
+        textObjectWinner.GetComponent<TextMeshProUGUI>().text = "";
         UpdateText();
         MouseCursor();
     }
@@ -29,6 +32,10 @@ public class GameMaster : MonoBehaviour
     void UpdateText()
     {
         textObject.GetComponent<TextMeshProUGUI>().text = "Punktzahl: " + score.ToString();
+        if (score == 10)
+        {
+            textObjectWinner.GetComponent<TextMeshProUGUI>().text = winMessage;
+        }
     }
 
 }

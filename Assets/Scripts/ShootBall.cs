@@ -61,6 +61,13 @@ public class ShootBall : MonoBehaviour
 
     void UpdateText()
     {
-        textObject.GetComponent<TextMeshProUGUI>().text = (pushForce * forceMultiplyer).ToString("0");
+        if (pushForce* forceMultiplyer <= 9000)
+        {
+            textObject.GetComponent<TextMeshProUGUI>().text = (pushForce * forceMultiplyer).ToString("0");
+        }
+        else
+        {
+            textObject.GetComponent<TextMeshProUGUI>().text = "IT IS OVER 9000!!!";
+        }
     }
 }
