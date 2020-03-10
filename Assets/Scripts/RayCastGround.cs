@@ -20,12 +20,12 @@ public class RayCastGround : MonoBehaviour
 
     void CastRay()
     {
-        RaycastHit hit;
-        //Debug.DrawRay(castRayFromPos.transform.position, castRayFromPos.transform.TransformDirection(Vector3.down * maxDistancefromGround), Color.yellow);
-        Physics.Raycast(castRayFromPos.transform.position, castRayFromPos.transform.TransformDirection(Vector3.down), out hit, maxDistancefromGround * 10f);
-        if (hit.distance >= maxDistancefromGround)
+        if (hasFallen == false)
         {
-            if (hasFallen == false)
+            RaycastHit hit;
+            //Debug.DrawRay(castRayFromPos.transform.position, castRayFromPos.transform.TransformDirection(Vector3.down * maxDistancefromGround), Color.yellow);
+            Physics.Raycast(castRayFromPos.transform.position, castRayFromPos.transform.TransformDirection(Vector3.down), out hit, maxDistancefromGround * 10f);
+            if (hit.distance >= maxDistancefromGround)
             {
                 UpdateGMScore();
                 hasFallen = true;
