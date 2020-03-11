@@ -1,0 +1,13 @@
+Zunächst Voraussetung: Damit es leichter wird, auf eine Unity Version einigen (evtl Pakete auch schon)
+Ein Projekt damit erstellen (entscheiden ob Github for Unity oder desktop).
+Für Github for Unity: Paket dl und installieren
+
+		https://github.com/github-for-unity/Unity/blob/master/docs/using/quick-guide.md
+		(Publish a new repository)
+Hauptverantwortlicher für das Repository: Vor der Inizialisierung in Unity: leer (also komplett leer) Repository erstellen (webseite)
+Inizalisieren -> Settings -> Remote -> https://github.com/<Eigentümername>/<Projektname>
+Die Änderungen Commiten (grau auf graue Textbox)
+
+Klonen über die Desktopanwendung, in Unity das Projekt hinzufügen
+
+
