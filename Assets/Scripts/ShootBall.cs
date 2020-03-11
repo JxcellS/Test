@@ -27,11 +27,11 @@ public class ShootBall : MonoBehaviour
         {
             return;
         }
-        if (Input.GetButton("Fire1"))
+        if (Input.GetButton(SingeltonMaster.instance.InputExample))
         {
             pushForce += Time.deltaTime;
         }
-        if (Input.GetButtonUp("Fire1"))
+        if (Input.GetButtonUp(SingeltonMaster.instance.InputExample))
         {
             GameObject ballClone = Instantiate(ball, transform);
             ballClone.transform.parent = null;
