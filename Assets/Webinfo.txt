@@ -1,0 +1,6 @@
+httpd.conf zeile 252+253 geändert zu:
+
+DocumentRoot "C:\Users\Info2\Documents\Web"
+<Directory "C:\Users\Info2\Documents\Web">
+
+Das ist der Pfad, wo die index.html liegt
