@@ -15,11 +15,24 @@ public class ReloadScene : MonoBehaviour
     void Update()
     {
         Reload();
+        Exit();
+    }
+
+    void Exit()
+    {
+        if (Input.GetKey(KeyCode.Escape))
+        {
+#if UNITY_EDITOR
+            //UnityEditor.EditorApplication.isPlaying = false;
+#else
+        Application.Quit();
+#endif
+        }
     }
 
     void Reload()
     {
-        if (Input.GetKey(KeyCode.Escape))
+        if (Input.GetKey(KeyCode.Tab))
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().name);
         }
